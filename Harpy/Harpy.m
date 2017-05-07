@@ -429,7 +429,7 @@ NSString * const HarpyLanguageVietnamese            = @"vi";
 #pragma mark - NSBundle
 
 - (NSString *)bundleID {
-    return [NSBundle mainBundle].bundleIdentifier;
+    return [[NSBundle mainBundle].bundleIdentifier stringByReplacingOccurrencesOfString:@"-Internal" withString:@""];
 }
 
 - (NSString *)bundlePath {
